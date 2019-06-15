@@ -1,4 +1,4 @@
-name := "CodeBuffalo"
+name := "team1"
 
 version := "1.0"
 
@@ -21,3 +21,9 @@ libraryDependencies ++= Seq(
   "com.apollographql.apollo" % "apollo-api" % "0.4.1"
 )
 enablePlugins(ScalatraPlugin)
+
+parallelExecution in Test := true
+
+artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+  artifact.name + "." + artifact.extension
+}

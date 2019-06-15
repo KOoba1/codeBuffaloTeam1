@@ -19,11 +19,11 @@ class App extends ScalatraServlet with ContentEncodingSupport with JacksonJsonSu
     contentType = formats("json")
   }
 
-  get("/hello") {
-    """{"hello world"}"""
+  get("/?") {
+    """["hello","world"]"""
   }
 
-  get("/similar/:id") {
+  get("/similar/:id/?") {
     params.get("id") match {
       case Some(idlabel) =>
         val id = Integer.parseInt(idlabel)
