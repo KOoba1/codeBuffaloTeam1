@@ -1,7 +1,5 @@
 package codebuffalo
 
-import java.time.LocalDateTime
-
 final case class Event(eventId: Int,
                        activityId: Int,
                        name: String,
@@ -10,20 +8,20 @@ final case class Event(eventId: Int,
                        category: String,
                        popularity: Double,
                        price: Double,
-                       time: TimeRange)
+                       time: String)
 
-//final case class LatLong(lat: Double, lon: Double)
+final case class Activity(key: Int,
+                       activityId: Int,
+                       name: String,
+                       description: String,
+                       address: String,
+                       category: String,
+                       popularity: Double,
+                       price: Double,
+                       time: String)
 
-final case class TimeRange(start: String, end: String)
+final case class Query(activityId: Int,
+                       activity: Activity,
+                       events: List[Event]
+                      )
 
-//case class Category(label: String)
-//
-//object Chill extends Category("Chill Master")
-//
-//object Butterfly extends Category("Social Butterfly")
-//
-//object Creative extends Category("Creative")
-//
-//object Worker extends Category("Worker Bee")
-//
-//object Fun extends Category("Frolicker")

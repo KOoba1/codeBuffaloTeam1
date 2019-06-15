@@ -33,8 +33,7 @@ public class Recommendation {
                        category: Category,
                        popularity: Double,
                        price: Double,
-                       location: Option[LatLong],
-                       time: Option[TimeRange])
+                       time: String)
 
      */
     public static List<Event> events(int activity) { // Takes in the key from the bored API
@@ -51,13 +50,13 @@ public class Recommendation {
                         " art and contemporary art. It is located directly opposite Buffalo State College " +
                         "and the Burchfield Penney Art Center.",
                         "1285 Elmwood Ave, Buffalo, NY 14222",
-                        "Fun", 0.8, 12, new TimeRange("10am", "5pm")));
+                        "Fun", 0.8, 12, "10am-5pm"));
                 events.add(new Event(2, 5490351, "The Buffalo Museum of Science", "The Buffalo " +
                         "Museum of Science is a science museum " +
                         "located at Martin Luther King Jr. Park in Buffalo, New York, United States, northeast of " +
                         "the downtown district, near the Kensington Expressway. The historic building was designed by" +
                         " August Esenwein and James A. Johnson and opened in 1929.",
-                        "Humboldt Pkwy, Buffalo, NY 14211", "Fun", 0.7, 11, new TimeRange("10am", "4pm")));
+                        "Humboldt Pkwy, Buffalo, NY 14211", "Fun", 0.7, 11, "10am-4pm"));
                 break;
 
                 // Events that are in "Social Butterfly"
@@ -66,7 +65,7 @@ public class Recommendation {
                         "truly legendary venues—not only because it is a linchpin in the local scene but because of its " +
                         "welcoming reputation among national and regional touring acts. Nietzsche’s is a fixture in " +
                         "Allentown, host to parties, benefits, local characters, and night after night after night of live music.",
-                        "248 Allen St, Buffalo, NY 14201", "social butterfly", 0.95, 0, new TimeRange("12pm", "4am")));
+                        "248 Allen St, Buffalo, NY 14201", "social butterfly", 0.95, 0, "12pm-4am"));
                break;
 
                // Events that are in "Chill Master"
@@ -75,7 +74,7 @@ public class Recommendation {
                         "equipment makes us a major music player in the Buffalo area. If you're in the market for " +
                         "anything from guitars to mandolins to drums, we have an extensive selection of new, used, vintage " +
                         "and clearance gear.","3385 Union Rd Suite 300, Cheektowaga, NY 14225", "Chill Master",
-                        0.5, 0, new TimeRange("10am", "9pm")));
+                        0.5, 0, "10am-9pm"));
                 break;
            // case 9216391:
                // events.add(new Event)
