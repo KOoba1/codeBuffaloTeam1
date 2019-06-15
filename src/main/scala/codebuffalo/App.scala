@@ -1,5 +1,7 @@
 package codebuffalo
 
+import java.util
+
 import org.scalatra._
 // JSON-related libraries
 import org.json4s.{DefaultFormats, Formats}
@@ -23,7 +25,7 @@ class App extends ScalatraServlet with ContentEncodingSupport with JacksonJsonSu
     """["hello","world"]"""
   }
 
-  get("/similar/:id/?") {
+  get("/events/:id/?") {
     params.get("id") match {
       case Some(idlabel) =>
         val id = Integer.parseInt(idlabel)
@@ -31,6 +33,18 @@ class App extends ScalatraServlet with ContentEncodingSupport with JacksonJsonSu
         ids
       case None => "{}"
     }
+  }
+
+  get("/graphql/?") {
+    val parameters: java.util.Map[String, String] = new util.HashMap
+    params.get("id") match {
+      case Some(idlabel) =>
+        val id = Integer.parseInt(idlabel)
+        val ids = Recommendation.recommend(id).asScala
+        ids
+      case None => "{}"
+    }
+    GraphQLHandler.doQuery(parameters)
   }
 
 }

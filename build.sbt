@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
   "org.json4s"              %% "json4s-jackson"    % "3.6.6",
   "junit"                   % "junit"              % "4.12",
   "com.novocode"            % "junit-interface"    % "0.11" % "test",
+  "com.graphql-java" % "graphql-java" % "2019-06-12T04-51-56-e994f41",
 
   "com.apollographql.apollo" % "apollo-api" % "0.4.1"
 )

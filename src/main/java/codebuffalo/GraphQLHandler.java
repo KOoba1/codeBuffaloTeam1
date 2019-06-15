@@ -1,3 +1,5 @@
+package codebuffalo;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -13,9 +15,9 @@ import graphql.schema.idl.TypeDefinitionRegistry;
 
 import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 
-public class GraphQLTest {
+public class GraphQLHandler {
 
-    public static void main(String[] args) throws Exception {
+    public static String doQuery(java.util.Map<String, String> parameters) {
 //        String schema = "type Query{hello: String} type schema{query: Query}";
         String schema = "type Query{hello: String} type schema{query: Query}";
 
@@ -40,6 +42,8 @@ public class GraphQLTest {
         // Prints: {hello=world}/
 
 //        String resp = sendGet("https://www.boredapi.com/api/activity?particiants=1");
+
+        return "{}"; // Stub result
     }
 
     private static String sendGet(String url) throws Exception {
