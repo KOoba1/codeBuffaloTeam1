@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
 
 import graphql.ExecutionResult;
 import graphql.GraphQL;
@@ -17,7 +18,7 @@ import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 
 public class GraphQLHandler {
 
-    public static String doQuery(java.util.Map<String, String> parameters) throws Exception {
+    public static String doQuery(java.util.Map<String, String> parameters) {
 			  String schema = "type Query{bored: String} type schema{query: Query}";
 
         SchemaParser schemaParser = new SchemaParser();

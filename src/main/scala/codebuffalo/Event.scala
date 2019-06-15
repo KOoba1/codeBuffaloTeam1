@@ -16,14 +16,14 @@ final case class Event(eventId: Int,
 
 final case class TimeRange(start: String, end: String)
 
-case class Category(label: String)
-
-object Chill extends Category("Chill Master")
-
-object Butterfly extends Category("Social Butterfly")
-
-object Creative extends Category("Creative")
-
-object Worker extends Category("Worker Bee")
-
-object Fun extends Category("Frolicker")
+//case class Category(label: String)
+//
+//object Chill extends Category("Chill Master")
+//
+//object Butterfly extends Category("Social Butterfly")
+//
+//object Creative extends Category("Creative")
+//
+//object Worker extends Category("Worker Bee")
+//
+//object Fun extends Category("Frolicker")

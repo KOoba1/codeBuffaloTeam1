@@ -22,4 +22,10 @@ public class TestRecommendation {
         Assert.assertTrue(Recommendation.influenced(123));
         Assert.assertTrue(Recommendation.influenced(456));
     }
+
+    @Test
+    public void testEvents() {
+//        List<Event> events = Recommendation.events();
+//        Assert.assertTrue(2, events.size);
+    }
 }
