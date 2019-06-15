@@ -1,5 +1,7 @@
 package codebuffalo
 
+import scala.collection.JavaConverters._
+
 final case class Event(eventId: Int,
                        activityId: Int,
                        name: String,
@@ -19,6 +21,12 @@ final case class Activity(activity: String,
 
 final case class Query(activityId: Int,
                        activity: Activity,
-                       events: List[Event]
-                      )
+                       events: List[Event])
 
+object Query {
+  def construct(activityId: Int,
+                activity: Activity,
+                events: java.util.List[Event]): Query = {
+    Query(activityId, activity, events.asScala.toList)
+  }
+}

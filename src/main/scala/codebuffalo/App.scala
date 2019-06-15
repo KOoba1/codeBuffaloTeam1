@@ -36,7 +36,7 @@ class App extends ScalatraServlet with ContentEncodingSupport with JacksonJsonSu
   }
 
   get("/graphql/?") {
-    val parameters: java.util.Map[String, String] = new util.HashMap
+    val parameters: java.util.HashMap[String, String] = new util.HashMap
     params.get("id") match {
       case Some(idlabel) =>
         val id = Integer.parseInt(idlabel)

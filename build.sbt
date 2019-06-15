@@ -23,7 +23,7 @@ libraryDependencies ++= Seq(
 )
 enablePlugins(ScalatraPlugin)
 
-parallelExecution in Test := true
+parallelExecution in Test := false
 
 artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
   artifact.name + "." + artifact.extension

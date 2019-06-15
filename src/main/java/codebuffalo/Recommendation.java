@@ -92,7 +92,7 @@ public class Recommendation {
                 // Donate blood at a local blood center
             case 6509779:
                 events.add(new Event(8, 6509779, "Union Road Blood Donation Center", "Blood Drive",
-                        "3601 Union Road Cheektowaga, NY 14225", "social butterfly", 0.2, 0,
+                        "3601 Union Road Cheektowaga, NY 14225", "Social_Butterfly", 0.2, 0,
                         "6/16/2019: 7am-3pm"));
                 events.add(new Event(9, 6509779, "Union Road Blood Donation Center", "Blood Drive",
                         "3601 Union Road Cheektowaga, NY 14225", "Social_Butterfly", 0.2, 0,
@@ -101,7 +101,7 @@ public class Recommendation {
 
                 default:
                 break;
-        } ;
+        }
         return events;
     }
 
