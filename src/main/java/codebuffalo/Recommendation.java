@@ -24,18 +24,7 @@ public class Recommendation {
         return activity == 123 || activity == 456;
     }
 
-    /*
-    final case class Event(eventId: Int,
-                       activityId: Int,
-                       name: String,
-                       description: String,
-                       address: String,
-                       category: Category,
-                       popularity: Double,
-                       price: Double,
-                       time: String)
 
-     */
     public static List<Event> events(int activity) { // Takes in the key of the activity that was chosen from the boredAPI
         List<Event> events = new ArrayList<>();
 
@@ -105,6 +94,9 @@ public class Recommendation {
                 events.add(new Event(8, 6509779, "Union Road Blood Donation Center", "Blood Drive",
                         "3601 Union Road Cheektowaga, NY 14225", "social butterfly", 0.2, 0,
                         "6/16/2019: 7am-3pm"));
+                events.add(new Event(9, 6509779, "Union Road Blood Donation Center", "Blood Drive",
+                        "3601 Union Road Cheektowaga, NY 14225", "social butterfly", 0.2, 0,
+                        "6/17/2019: 11:30am-7:30pm"));
                 break;
 
                 default:
@@ -112,4 +104,5 @@ public class Recommendation {
         } ;
         return events;
     }
+
 }
