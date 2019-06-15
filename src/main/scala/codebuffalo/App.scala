@@ -29,7 +29,7 @@ class App extends ScalatraServlet with ContentEncodingSupport with JacksonJsonSu
     params.get("id") match {
       case Some(idlabel) =>
         val id = Integer.parseInt(idlabel)
-        val ids = Recommendation.recommend(id).asScala
+        val ids = Recommendation.events(id).asScala
         ids
       case None => "{}"
     }
