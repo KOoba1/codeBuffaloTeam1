@@ -7,7 +7,7 @@ final case class Event(eventId: Int,
                        name: String,
                        description: String,
                        address: String,
-                       category: Category,
+                       category: String,
                        popularity: Double,
                        price: Double,
                        time: TimeRange)
