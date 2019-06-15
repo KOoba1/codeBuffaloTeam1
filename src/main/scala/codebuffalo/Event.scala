@@ -4,17 +4,17 @@ import java.time.LocalDateTime
 
 final case class Event(eventId: Int,
                        activityId: Int,
+                       name: String,
                        description: String,
                        address: String,
-                       category: Category,
+                       category: String,
                        popularity: Double,
                        price: Double,
-                       location: Option[LatLong],
-                       time: Option[TimeRange])
+                       time: TimeRange)
 
-final case class LatLong(lat: Double, lon: Double)
+//final case class LatLong(lat: Double, lon: Double)
 
-final case class TimeRange(start: LocalDateTime, end: LocalDateTime)
+final case class TimeRange(start: String, end: String)
 
 case class Category(label: String)
 
