@@ -17,40 +17,52 @@ import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 
 public class GraphQLHandler {
 
-    public static String doQuery(java.util.Map<String, String> parameters) {
-//        String schema = "type Query{hello: String} type schema{query: Query}";
-        String schema = "type Query{hello: String} type schema{query: Query}";
+    public static String doQuery(java.util.Map<String, String> parameters) throws Exception {
+			  String schema = "type Query{bored: String} type schema{query: Query}";
 
         SchemaParser schemaParser = new SchemaParser();
         TypeDefinitionRegistry typeDefinitionRegistry = schemaParser.parse(schema);
 
         RuntimeWiring runtimeWiring = newRuntimeWiring()
-//                .type("Query",
-//                        builder -> builder.dataFetcher("hello", new StaticDataFetcher("world")))
                 .type("Query",
-                        builder -> builder.dataFetcher("hello",
-                                e -> sendGet("https://www.boredapi.com/api/activity?particiants=1")))
+                        builder -> builder.dataFetcher("bored",
+                                e -> sendGet(makeUrl(parameters))))
                 .build();
-
+        //localhost:8080/team1/events/{id}
         SchemaGenerator schemaGenerator = new SchemaGenerator();
         GraphQLSchema graphQLSchema = schemaGenerator.makeExecutableSchema(typeDefinitionRegistry, runtimeWiring);
 
         GraphQL build = GraphQL.newGraphQL(graphQLSchema).build();
-        ExecutionResult executionResult = build.execute("{hello}");
+        ExecutionResult executionResult = build.execute("{bored}");
 
-        System.out.println(executionResult.getData().toString());
-        // Prints: {hello=world}/
+        if(executionResult.isDataPresent()) {
+            String res = executionResult.getData().toString();
+            System.out.println(res.substring(res.indexOf("{", 1), res.indexOf("}", 1) + 1));
+            return getKey(res);
+        } else {
+            throw new RuntimeException("No data present for requested parameters");
+        }
+    }
 
-//        String resp = sendGet("https://www.boredapi.com/api/activity?particiants=1");
+    private static String getKey(String result) {
+        int keyIndex = result.indexOf("\"key\"");
+        String key = result.substring(keyIndex + 7, result.indexOf("\"", keyIndex + 8));
+        System.out.println(key);
+        return key;
+    }
 
-        return "{}"; // Stub result
+    private static String makeUrl(Map<String, String> map) {
+        StringBuilder url = new StringBuilder("https://www.boredapi.com/api/activity?");
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            url.append("&").append(entry.getKey()).append("=").append(entry.getValue());
+        }
+        return url.toString();
     }
 
     private static String sendGet(String url) throws Exception {
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
-        int responseCode = con.getResponseCode();
         StringBuffer response = new StringBuffer();
         try(BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()))) {
