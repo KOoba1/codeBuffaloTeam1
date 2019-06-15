@@ -50,7 +50,7 @@ public class TestRecommendation {
     @Test
     public void testEvents5() {
         List<Event> events = Recommendation.events(6509779);
-        Assert.assertEquals("Should be 1 event", 1, events.size());
+        Assert.assertEquals("Should be 1 event", 2, events.size());
     }
 
     @Test

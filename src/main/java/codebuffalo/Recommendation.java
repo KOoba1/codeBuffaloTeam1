@@ -62,10 +62,10 @@ public class Recommendation {
                         "truly legendary venues—not only because it is a linchpin in the local scene but because of its " +
                         "welcoming reputation among national and regional touring acts. Nietzsche’s is a fixture in " +
                         "Allentown, host to parties, benefits, local characters, and night after night after night of live music.",
-                        "248 Allen St, Buffalo, NY 14201", "social butterfly", 0.95, 0,
+                        "248 Allen St, Buffalo, NY 14201", "Social_Butterfly", 0.95, 0,
                         "Everyday: 12pm - 4am"));
                 events.add(new Event(5, 2211716, "Rec Room", "Live music bar", "79 W Chippewa St," +
-                        " Buffalo, NY 14202", "social butterfly", 0.88, 0, "Friday's: 6pm - 3am" +
+                        " Buffalo, NY 14202", "Social_Butterfly", 0.88, 0, "Friday's: 6pm - 3am" +
                         "Saturdays: 6pm - 2:30am"));
                break;
 
@@ -74,7 +74,7 @@ public class Recommendation {
                 events.add(new Event(6, 3192099, "Guitar Center", "Our broad range of " +
                         "equipment makes us a major music player in the Buffalo area. If you're in the market for " +
                         "anything from guitars to mandolins to drums, we have an extensive selection of new, used, vintage " +
-                        "and clearance gear.","3385 Union Rd Suite 300, Cheektowaga, NY 14225", "Chill Master",
+                        "and clearance gear.","3385 Union Rd Suite 300, Cheektowaga, NY 14225", "Chill_Master",
                         0.4, 0, "Everday: 10am-9pm"));
                 break;
 
@@ -95,7 +95,7 @@ public class Recommendation {
                         "3601 Union Road Cheektowaga, NY 14225", "social butterfly", 0.2, 0,
                         "6/16/2019: 7am-3pm"));
                 events.add(new Event(9, 6509779, "Union Road Blood Donation Center", "Blood Drive",
-                        "3601 Union Road Cheektowaga, NY 14225", "social butterfly", 0.2, 0,
+                        "3601 Union Road Cheektowaga, NY 14225", "Social_Butterfly", 0.2, 0,
                         "6/17/2019: 11:30am-7:30pm"));
                 break;
 
