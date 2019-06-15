@@ -19,7 +19,7 @@ class App extends ScalatraServlet with ContentEncodingSupport with JacksonJsonSu
     contentType = formats("json")
   }
 
-  get("/") {
+  get("/hello") {
     """{"hello world"}"""
   }
 
