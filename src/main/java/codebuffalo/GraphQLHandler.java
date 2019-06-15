@@ -25,8 +25,6 @@ public class GraphQLHandler {
         TypeDefinitionRegistry typeDefinitionRegistry = schemaParser.parse(schema);
 
         RuntimeWiring runtimeWiring = newRuntimeWiring()
-//                .type("Query",
-//                        builder -> builder.dataFetcher("hello", new StaticDataFetcher("world")))
                 .type("Query",
                         builder -> builder.dataFetcher("hello",
                                 e -> sendGet("https://www.boredapi.com/api/activity?particiants=1")))
