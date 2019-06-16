@@ -26,13 +26,13 @@ public class TestRecommendation {
     @Test
     public void testEvents1() {
         List<Event> events = Recommendation.events(5490351);
-        Assert.assertEquals("Should be 3 events", 3, events.size());
+        Assert.assertEquals("Should be 3 events", 4, events.size());
     }
 
     @Test
     public void testEvents2() {
         List<Event> events = Recommendation.events(2211716);
-        Assert.assertEquals("Should be 2 events", 2, events.size());
+        Assert.assertEquals("Should be 2 events", 3, events.size());
     }
 
     @Test

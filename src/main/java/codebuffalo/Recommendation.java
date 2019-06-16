@@ -109,7 +109,7 @@ public class Recommendation {
 
                 default:
                 break;
-        } ;
+        }
         return events;
     }
 

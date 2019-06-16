@@ -116,7 +116,7 @@ public class GraphQLHandler {
     private static void filterForRelevance(java.util.HashMap<String, String> ps) {
         String c = ps.get("category");
         if (c != null) {
-            switch (c) {
+            switch (c.trim()) {
                 case "Social_Butterfly":
                     if (new Random().nextBoolean()) {
                         ps.put("key", "6509779");
