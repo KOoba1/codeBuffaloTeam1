@@ -1,3 +1,5 @@
+Build requires that you have SBT (Simple build-tool installe)
+
 Build code with
 $ sbt package
 There should be a file called ./target/scala-2.12/team1.war
