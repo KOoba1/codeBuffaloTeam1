@@ -54,24 +54,32 @@ public class Recommendation {
                         " same-sex couples throughout WNY, our vintage menu collection drive seeking original menus from " +
                         "locally owned restaurants and the world’s largest Buffalo Bills football memorabilia collection.",
                         "1 Museum Ct, Buffalo, NY 14216", "Fun", 0.55, 10, "Everday: 10am-5pm"));
+                events.add(new Event(4, 5490351, "Frank Lloyd Wright's Martin House Complex",
+                        "The Darwin D. Martin House Complex, also known as the Darwin Martin House National " +
+                                "Historic Landmark, was designed by Frank Lloyd Wright and built between 1903 and 1905.",
+                        "125 Jewett Pkwy, Buffalo, NY 14214", "Fun", 0.69, 22, "6/16/2019: 10am-11am"));
                 break;
 
                 // Go to a live music bar
             case 2211716:
-                events.add(new Event(4, 2211716, "Nietzsche’s", "Nietzsche's is one of Buffalo’s " +
+                events.add(new Event(5, 2211716, "Nietzsche’s", "Nietzsche's is one of Buffalo’s " +
                         "truly legendary venues—not only because it is a linchpin in the local scene but because of its " +
                         "welcoming reputation among national and regional touring acts. Nietzsche’s is a fixture in " +
                         "Allentown, host to parties, benefits, local characters, and night after night after night of live music.",
                         "248 Allen St, Buffalo, NY 14201", "Social_Butterfly", 0.95, 0,
                         "Everyday: 12pm - 4am"));
-                events.add(new Event(5, 2211716, "Rec Room", "Live music bar", "79 W Chippewa St," +
+                events.add(new Event(6, 2211716, "Rec Room", "Live music bar", "79 W Chippewa St," +
                         " Buffalo, NY 14202", "Social_Butterfly", 0.88, 0, "Friday's: 6pm - 3am" +
                         "Saturdays: 6pm - 2:30am"));
+                events.add(new Event(7, 2211716, "Buffalo Iron Works", "Intimate live " +
+                        "music lounge in an early 1900s factory space serving burgers, wings & other bar food.",
+                        "49 Illinois St, Buffalo, NY 14203", "Social_Butterfly", 0.92, 0,
+                        "Everyday: 4pm-12am"));
                break;
 
                // Learn a new instrument
             case 3192099:
-                events.add(new Event(6, 3192099, "Guitar Center", "Our broad range of " +
+                events.add(new Event(8, 3192099, "Guitar Center", "Our broad range of " +
                         "equipment makes us a major music player in the Buffalo area. If you're in the market for " +
                         "anything from guitars to mandolins to drums, we have an extensive selection of new, used, vintage " +
                         "and clearance gear.","3385 Union Rd Suite 300, Cheektowaga, NY 14225", "Chill_Master",
@@ -80,7 +88,7 @@ public class Recommendation {
 
                // Learn woodworking
             case 9216391:
-                events.add(new Event(7, 9216391, "Toolbox OR Planter - Woodworking Class at The Foundry",
+                events.add(new Event(9, 9216391, "Toolbox OR Planter - Woodworking Class at The Foundry",
                         "In this quick class, you’ll get a overview of the tools in The Foundry's shared woodshop" +
                                 " by making a classic carrier for tools OR an outdoor planter (same project different purpose)." +
                                 " Learn about using the planer, tables saw, drills, and sanders. Participants leave with " +
@@ -91,10 +99,10 @@ public class Recommendation {
 
                 // Donate blood at a local blood center
             case 6509779:
-                events.add(new Event(8, 6509779, "Union Road Blood Donation Center", "Blood Drive",
+                events.add(new Event(10, 6509779, "Union Road Blood Donation Center", "Blood Drive",
                         "3601 Union Road Cheektowaga, NY 14225", "social butterfly", 0.2, 0,
                         "6/16/2019: 7am-3pm"));
-                events.add(new Event(9, 6509779, "Union Road Blood Donation Center", "Blood Drive",
+                events.add(new Event(11, 6509779, "Union Road Blood Donation Center", "Blood Drive",
                         "3601 Union Road Cheektowaga, NY 14225", "Social_Butterfly", 0.2, 0,
                         "6/17/2019: 11:30am-7:30pm"));
                 break;
