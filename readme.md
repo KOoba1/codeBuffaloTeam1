@@ -14,6 +14,7 @@ Copy /target/scala-2.12/code1.war into webapps folder of jetty-distribution/9.4.
 
 Launch server with
 $ cd jetty-distribution-9.4.19.v20190610
-$ java -jar start.jar -Djetty.http.port=8081
+$ java -jar start.jar -Djetty.http.port=8080
 
-*Instructions for javascript app go here*
+
+Once the server is running you can simply serve up the 'dist' directory using any web server youd like as it is static content.  npm serve is one possiblity: https://www.npmjs.com/package/serve 
